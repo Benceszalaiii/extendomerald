@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "extendomerald",
+	"version": "${version}",
+	"name": "Extendomerald",
+	"description": "They say money shouldn't be used as a weapon. Now it can be!",
+	"authors": [
+		"Benceszalaiii"
+	],
+	"contact": {
+		"homepage": "https://benceszalai.me",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/extendomerald/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.benceszalai.extendomerald.Extendomerald"
+		],
+		"fabric-datagen": [
+			"net.benceszalai.extendomerald.ExtendomeraldDataGenerator"
+		],
+		"client": [
+			"net.benceszalai.extendomerald.ExtendomeraldClient"
+		]
+	},
+	"mixins": [
+		"extendomerald.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
