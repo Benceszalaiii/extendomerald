@@ -2,7 +2,6 @@ package net.benceszalai.extendomerald;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

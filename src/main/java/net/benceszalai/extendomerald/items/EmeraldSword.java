@@ -15,7 +15,7 @@ public class EmeraldSword extends SwordItem {
     }
     @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker){
-        attacker.swingHand(attacker.preferredHand);
+        attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.SPEED, 120, 0));
         attacker.addStatusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 2));
         return true;
     }
