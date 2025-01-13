@@ -1,5 +1,6 @@
 package net.benceszalai.extendomerald;
 
+import net.benceszalai.extendomerald.items.EmeraldSword;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
@@ -21,11 +22,11 @@ public class ModItems {
             });
             return registeredItem;
         }
-        public static SwordItem registerSword(){
+        public static EmeraldSword registerSword(){
             Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_sword");
             RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
-            Item.Settings settings = new SwordItem.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
-            SwordItem registeredItem = Registry.register(Registries.ITEM, key, new SwordItem(ToolMaterial.DIAMOND, 4.5F, -1.8F, settings));
+            Item.Settings settings = new EmeraldSword.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
+            EmeraldSword registeredItem = Registry.register(Registries.ITEM, key, new EmeraldSword(ToolMaterial.DIAMOND, 4.5F, -1.8F, settings));
             ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemgroup) -> {
                 itemgroup.add(registeredItem);
             });
@@ -64,7 +65,7 @@ public class ModItems {
             return registeredItem;
         }
 
-        public static final SwordItem EMERALD_SWORD = registerSword();
+        public static final EmeraldSword EMERALD_SWORD = registerSword();
         public static final PickaxeItem EMERALD_PICKAXE = registerPickaxe();
         public static final AxeItem EMERALD_AXE = registerAxe();
         public static final ShovelItem EMERALD_SHOVEL = registerShovel();

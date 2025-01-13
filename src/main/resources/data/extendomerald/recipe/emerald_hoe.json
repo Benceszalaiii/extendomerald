@@ -6,12 +6,12 @@
     "X": "minecraft:emerald"
   },
   "pattern": [
-    "XXX",
-    " # ",
-    " # "
+    "XX",
+    " #",
+    " #"
   ],
   "result": {
     "count": 1,
-    "id": "extendomerald:emerald_pickaxe"
+    "id": "extendomerald:emerald_hoe"
   }
 }
