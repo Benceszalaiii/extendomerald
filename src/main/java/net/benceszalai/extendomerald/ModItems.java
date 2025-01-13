@@ -11,16 +11,6 @@ import net.minecraft.util.Rarity;
 
 public class ModItems {
 
-        public static Item register(String id, Item.Settings itemSettings, RegistryKey<ItemGroup> group) {
-            Identifier itemId = Identifier.of(Extendomerald.MOD_ID, id);
-            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
-            Item.Settings settings = itemSettings.registryKey(key);
-            Item registeredItem = Registry.register(Registries.ITEM, key, new Item(settings));
-            ItemGroupEvents.modifyEntriesEvent(group).register((itemgroup) -> {
-                itemgroup.add(registeredItem);
-            });
-            return registeredItem;
-        }
         public static PickaxeItem registerPickaxe() {
             Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_pickaxe");
             RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
@@ -74,10 +64,11 @@ public class ModItems {
             return registeredItem;
         }
 
-        public static final Item EMERALD_SWORD = registerSword();
-        public static final Item EMERALD_PICKAXE = registerPickaxe();
-        public static final Item EMERALD_AXE = registerAxe();
-    public static final Item EMERALD_TORCH = register("emerald_torch", new Item.Settings().maxCount(64), ItemGroups.BUILDING_BLOCKS);
+        public static final SwordItem EMERALD_SWORD = registerSword();
+        public static final PickaxeItem EMERALD_PICKAXE = registerPickaxe();
+        public static final AxeItem EMERALD_AXE = registerAxe();
+        public static final ShovelItem EMERALD_SHOVEL = registerShovel();
+        public static final HoeItem EMERALD_HOE = registerHoe();
         public static void registerModItems(){
             Extendomerald.LOGGER.info("Registering mod items for " + Extendomerald.MOD_ID);
 

@@ -12,5 +12,6 @@ public class Extendomerald implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerModItems();
+		ModBlocks.initialize();
 	}
 }

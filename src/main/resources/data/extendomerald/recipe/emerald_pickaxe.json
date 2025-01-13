@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:stick",
-    "X": "#minecraft:emerald"
+    "X": "minecraft:emerald"
   },
   "pattern": [
     "XXX",
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 1,
-    "id": "extendomerald:emerald_pickaxe"
+    "id": "extendomerald:emerald_sword"
   }
 }
