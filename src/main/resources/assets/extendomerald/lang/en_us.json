@@ -1,6 +1,8 @@
 {
   "item.extendomerald.emerald_sword": "Emerald Sword",
   "item.extendomerald.emerald_pickaxe": "Emerald Pickaxe",
-  "item.extendomerald.suspicious_instance": "Suspicious Instance",
-  "item.extendomerald.emerald_torch": "Emerald Torch"
+  "item.extendomerald.emerald_torch": "Emerald Torch",
+  "item.extendomerald.emerald_axe": "Emerald Axe",
+  "item.extendomerald.emerald_hoe": "Emerald Hoe",
+  "item.extendomerald.emerald_shovel": "Emerald Shovel"
 }

@@ -24,14 +24,59 @@ public class ModItems {
         public static PickaxeItem registerPickaxe() {
             Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_pickaxe");
             RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
-            Item.Settings settings = new Item.Settings().registryKey(key);
+            Item.Settings settings = new PickaxeItem.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
             PickaxeItem registeredItem = Registry.register(Registries.ITEM, key, new PickaxeItem(ToolMaterial.DIAMOND, 2, -2.8F, settings));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemgroup) -> {
+                itemgroup.add(registeredItem);
+            });
+            return registeredItem;
+        }
+        public static SwordItem registerSword(){
+            Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_sword");
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
+            Item.Settings settings = new SwordItem.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
+            SwordItem registeredItem = Registry.register(Registries.ITEM, key, new SwordItem(ToolMaterial.DIAMOND, 4.5F, -1.8F, settings));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register((itemgroup) -> {
+                itemgroup.add(registeredItem);
+            });
             return registeredItem;
         }
 
-        public static final Item EMERALD_SWORD = register("emerald_sword",  new SwordItem.Settings().maxCount(1), ItemGroups.COMBAT);
+        public static AxeItem registerAxe(){
+            Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_axe");
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
+            Item.Settings settings = new AxeItem.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
+            AxeItem registeredItem = Registry.register(Registries.ITEM, key, new AxeItem(ToolMaterial.DIAMOND, 5.0F, -1.8F, settings));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemgroup) -> {
+                itemgroup.add(registeredItem);
+            });
+            return registeredItem;
+        }
+
+        public static ShovelItem registerShovel(){
+            Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_shovel");
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
+            Item.Settings settings = new ShovelItem.Settings().registryKey(key).rarity(Rarity.UNCOMMON);
+            ShovelItem registeredItem = Registry.register(Registries.ITEM, key, new ShovelItem(ToolMaterial.DIAMOND, 2.5F, -2.3F, settings));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemgroup) -> {
+                itemgroup.add(registeredItem);
+            });
+            return registeredItem;
+        }
+        public static HoeItem registerHoe(){
+            Identifier itemId = Identifier.of(Extendomerald.MOD_ID, "emerald_hoe");
+            RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
+            Item.Settings settings = new HoeItem.Settings().registryKey(key).rarity(Rarity.COMMON);
+            HoeItem registeredItem = Registry.register(Registries.ITEM, key, new HoeItem(ToolMaterial.DIAMOND, 2.5F, -2.3F, settings));
+            ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register((itemgroup) -> {
+                itemgroup.add(registeredItem);
+            });
+            return registeredItem;
+        }
+
+        public static final Item EMERALD_SWORD = registerSword();
         public static final Item EMERALD_PICKAXE = registerPickaxe();
-        public static final Item SUSPICIOUS_INSTANCE = register("suspicious_instance", new Item.Settings(), ItemGroups.INGREDIENTS);
+        public static final Item EMERALD_AXE = registerAxe();
     public static final Item EMERALD_TORCH = register("emerald_torch", new Item.Settings().maxCount(64), ItemGroups.BUILDING_BLOCKS);
         public static void registerModItems(){
             Extendomerald.LOGGER.info("Registering mod items for " + Extendomerald.MOD_ID);
