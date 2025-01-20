@@ -1,8 +1,10 @@
 package net.benceszalai.extendomerald;
 
+import net.benceszalai.extendomerald.utils.EmeraldVeinMinerUsageEvent;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.server.MinecraftServer;
@@ -28,7 +30,8 @@ public class Extendomerald implements ModInitializer {
 				// Apply Luck II (duration in ticks, amplifier starts at 0)
 				player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 20, 1));
 			}
-		}
+		};
+		PlayerBlockBreakEvents.BEFORE.register(new EmeraldVeinMinerUsageEvent());
 	}
 
 }
