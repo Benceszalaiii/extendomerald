@@ -3,7 +3,7 @@
   "category": "equipment",
   "key": {
     "#": "minecraft:stick",
-    "X": "minecraft:emerald"
+    "X": "extendomerald:sharpened_emerald"
   },
   "pattern": [
     "XXX",

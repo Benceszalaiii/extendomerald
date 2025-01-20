@@ -3,7 +3,8 @@
 	"package": "net.benceszalai.extendomerald.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"EmeraldMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

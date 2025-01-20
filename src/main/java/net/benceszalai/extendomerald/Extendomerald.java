@@ -1,6 +1,9 @@
 package net.benceszalai.extendomerald;
 
+import net.benceszalai.extendomerald.items.EmeraldPickaxe;
+import net.benceszalai.extendomerald.items.ModToolMaterial;
 import net.benceszalai.extendomerald.utils.EmeraldVeinMinerUsageEvent;
+import net.benceszalai.extendomerald.utils.ModTags;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -23,12 +26,9 @@ public class Extendomerald implements ModInitializer {
 		ServerTickEvents.END_SERVER_TICK.register(this::onServerTick);
 	}
 	private void onServerTick(MinecraftServer server) {
-		// Loop through all players on the server
 		for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {
-			// Check if the player is holding the desired item in their main hand
-			if (player.getMainHandStack().getItem() == ModItems.EMERALD_PICKAXE) {
-				// Apply Luck II (duration in ticks, amplifier starts at 0)
-				player.addStatusEffect(new StatusEffectInstance(StatusEffects.LUCK, 20, 1));
+			if (player.getMainHandStack().getItem() instanceof EmeraldPickaxe) {
+				player.addStatusEffect(new StatusEffectInstance(StatusEffects.HASTE, 20, 1));
 			}
 		};
 		PlayerBlockBreakEvents.BEFORE.register(new EmeraldVeinMinerUsageEvent());

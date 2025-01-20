@@ -2,16 +2,16 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": "minecraft:stick",
+    "#": "minecraft:string",
     "X": "extendomerald:sharpened_emerald"
   },
   "pattern": [
-    "XX",
-    "X#",
-    " #"
+    " X#",
+    "X #",
+    " X#"
   ],
   "result": {
     "count": 1,
-    "id": "extendomerald:emerald_axe"
+    "id": "extendomerald:emerald_bow"
   }
 }
