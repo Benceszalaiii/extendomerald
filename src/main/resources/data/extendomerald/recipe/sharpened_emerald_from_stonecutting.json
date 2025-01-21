@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "extendomerald:hardened_emerald",
+  "result": {
+    "count": 1,
+    "id": "extendomerald:sharpened_emerald"
+  }
+}

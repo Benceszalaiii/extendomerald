@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 178,
+  "experience": 3,
+  "group": "extendomerald:hardened_emerald",
+  "ingredient": "extendomerald:emerald_clump",
+  "result": {
+    "id": "extendomerald:hardened_emerald"
+  }
+}

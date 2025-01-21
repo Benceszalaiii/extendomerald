@@ -26,10 +26,12 @@ public abstract class EmeraldMixin {
             World world = context.getWorld();
             if (player != null && world.isClient) {
                 Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
-                if (player.isInSneakingPose() && clickedBlock == Blocks.OBSIDIAN){
+                if (player.isInSneakingPose() && clickedBlock == Blocks.OBSIDIAN) {
                     player.sendMessage(Text.literal("You sharpened an emerald on obsidian!"), true);
                     player.getMainHandStack().decrement(1);
-                    player.giveItemStack(new ItemStack(ModItems.SHARPENED_EMERALD, 1));
+                    if (world.getRandom().nextFloat() < 0.36) {
+                        player.giveItemStack(new ItemStack(ModItems.EMERALD_SHARD, 1));
+                    }
                 }
             }
             cir.setReturnValue(ActionResult.SUCCESS);

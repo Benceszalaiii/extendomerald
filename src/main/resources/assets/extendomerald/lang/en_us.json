@@ -6,5 +6,14 @@
   "item.extendomerald.emerald_hoe": "Emerald Hoe",
   "item.extendomerald.emerald_shovel": "Emerald Shovel",
   "item.extendomerald.emerald_bow": "Emerald Bow",
-  "item.extendomerald.sharpened_emerald": "Sharpened Emerald"
+  "item.extendomerald.emerald_shard": "Emerald Shard",
+  "item.extendomerald.emerald_shard.tooltip": "§7 Half processed Emerald.",
+  "item.extendomerald.emerald_shard.tooltip2": "§7 We'll need more than this to make something useful.",
+  "item.extendomerald.emerald_clump": "Clump of Emerald",
+  "item.extendomerald.emerald_clump.tooltip": "§7 A clump of emerald that can be hardened with heat.",
+  "item.extendomerald.sharpened_emerald": "Sharpened Emerald",
+  "item.extendomerald.sharpened_emerald.tooltip": "§7 A sharpened emerald. It's sharp enough to cut through anything.",
+  "item.extendomerald.hardened_emerald": "Hardened Emerald",
+  "item.extendomerald.hardened_emerald.tooltip": "§7 A hardened emerald. It's tough enough to be used as a tool.",
+  "item.extendomerald.hardened_emerald.tooltip2": "§7 To do so, you need to sharpen it first using a stonecutter."
 }

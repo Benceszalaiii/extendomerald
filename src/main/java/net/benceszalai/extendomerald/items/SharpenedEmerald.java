@@ -9,6 +9,7 @@ import net.minecraft.entity.projectile.FireballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -23,6 +24,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.world.World;
 
+import java.util.List;
+
 public class SharpenedEmerald extends Item {
     public SharpenedEmerald(Settings settings) {
         super(settings);
@@ -32,5 +35,12 @@ public class SharpenedEmerald extends Item {
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, itemId);
         Item.Settings settings = new EmeraldSword.Settings().registryKey(key).rarity(Rarity.RARE);
         return Registry.register(Registries.ITEM, key, new SharpenedEmerald(settings));
+    }
+
+    @Override
+    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
+        tooltip.add(Text.translatable("item.extendomerald.sharpened_emerald.tooltip"));
+        super.appendTooltip(stack, context, tooltip, type);
+
     }
 }
