@@ -24,7 +24,7 @@ public abstract class EmeraldMixin {
         if (stack.isOf(Items.EMERALD)) {
             PlayerEntity player = context.getPlayer();
             World world = context.getWorld();
-            if (player != null && world.isClient) {
+            if (player != null && !world.isClient) {
                 Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
                 if (player.isInSneakingPose() && clickedBlock == Blocks.OBSIDIAN) {
                     player.sendMessage(Text.literal("You sharpened an emerald on obsidian!"), true);
