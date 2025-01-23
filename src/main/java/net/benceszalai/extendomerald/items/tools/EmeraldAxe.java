@@ -1,4 +1,4 @@
-package net.benceszalai.extendomerald.items;
+package net.benceszalai.extendomerald.items.tools;
 
 import net.benceszalai.extendomerald.Extendomerald;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;

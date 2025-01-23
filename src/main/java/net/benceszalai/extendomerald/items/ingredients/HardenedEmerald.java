@@ -1,4 +1,4 @@
-package net.benceszalai.extendomerald.items;
+package net.benceszalai.extendomerald.items.ingredients;
 
 import net.minecraft.item.Item;
 

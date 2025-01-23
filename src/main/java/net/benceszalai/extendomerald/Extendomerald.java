@@ -1,9 +1,7 @@
 package net.benceszalai.extendomerald;
 
-import net.benceszalai.extendomerald.items.EmeraldPickaxe;
-import net.benceszalai.extendomerald.items.ModToolMaterial;
+import net.benceszalai.extendomerald.items.tools.EmeraldPickaxe;
 import net.benceszalai.extendomerald.utils.EmeraldVeinMinerUsageEvent;
-import net.benceszalai.extendomerald.utils.ModTags;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
@@ -24,6 +22,7 @@ public class Extendomerald implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.initialize();
 		ServerTickEvents.END_SERVER_TICK.register(this::onServerTick);
+
 	}
 	private void onServerTick(MinecraftServer server) {
 		for (ServerPlayerEntity player : server.getPlayerManager().getPlayerList()) {

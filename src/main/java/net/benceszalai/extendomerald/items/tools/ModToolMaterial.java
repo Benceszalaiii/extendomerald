@@ -1,4 +1,4 @@
-package net.benceszalai.extendomerald.items;
+package net.benceszalai.extendomerald.items.tools;
 
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.registry.tag.BlockTags;

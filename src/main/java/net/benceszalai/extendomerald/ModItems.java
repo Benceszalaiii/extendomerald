@@ -1,6 +1,12 @@
 package net.benceszalai.extendomerald;
 
-import net.benceszalai.extendomerald.items.*;
+import net.benceszalai.extendomerald.items.equipment.EmeraldBoots;
+import net.benceszalai.extendomerald.items.equipment.EmeraldChestplate;
+import net.benceszalai.extendomerald.items.equipment.EmeraldHelmet;
+import net.benceszalai.extendomerald.items.equipment.EmeraldLeggings;
+import net.benceszalai.extendomerald.items.ingredients.EmeraldShard;
+import net.benceszalai.extendomerald.items.ingredients.SharpenedEmerald;
+import net.benceszalai.extendomerald.items.tools.*;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -26,6 +32,10 @@ public class ModItems {
         public static final EmeraldHoe EMERALD_HOE = EmeraldHoe.register();
         public static final EmeraldBow EMERALD_BOW = EmeraldBow.register();
         public static final EmeraldShard EMERALD_SHARD = EmeraldShard.register();
+        public static final EmeraldHelmet EMERALD_HELMET = EmeraldHelmet.register();
+        public static final EmeraldChestplate EMERALD_CHESTPLATE = EmeraldChestplate.register();
+        public static final EmeraldLeggings EMERALD_LEGGINGS = EmeraldLeggings.register();
+        public static final EmeraldBoots EMERALD_BOOTS = EmeraldBoots.register();
         public static void registerModItems(){
             Extendomerald.LOGGER.info("Registering mod items for " + Extendomerald.MOD_ID);
 

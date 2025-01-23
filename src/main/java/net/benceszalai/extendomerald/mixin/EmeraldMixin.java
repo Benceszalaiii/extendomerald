@@ -18,6 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(Item.class)
 public abstract class EmeraldMixin {
+
     @Inject(method = "useOnBlock", at = @At("HEAD"), cancellable = true)
     private void onUseOnBlock(ItemUsageContext context, CallbackInfoReturnable<ActionResult> cir) {
         ItemStack stack = context.getStack();

@@ -1,15 +1,14 @@
 package net.benceszalai.extendomerald.utils;
 
-import net.benceszalai.extendomerald.items.EmeraldAxe;
-import net.benceszalai.extendomerald.items.EmeraldPickaxe;
-import net.benceszalai.extendomerald.items.EmeraldShovel;
+import net.benceszalai.extendomerald.items.tools.EmeraldAxe;
+import net.benceszalai.extendomerald.items.tools.EmeraldPickaxe;
+import net.benceszalai.extendomerald.items.tools.EmeraldShovel;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
